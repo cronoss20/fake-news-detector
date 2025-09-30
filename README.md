@@ -147,8 +147,3 @@ This implementation provides a production-ready fake news detection system that 
 > 4. **Extras:**
 >    - Añadir soporte para Docker (opcional).
 >    - Usar GitHub Pages para desplegar el frontend y proporcionar instrucciones para desplegar el backend en una plataforma como Render o Heroku.
-
-<!-- START COPILOT CODING AGENT TIPS -->
----
-
-✨ Let Copilot coding agent [set things up for you](https://github.com/cronoss20/fake-news-detector/issues/new?title=✨+Set+up+Copilot+instructions&body=Configure%20instructions%20for%20this%20repository%20as%20documented%20in%20%5BBest%20practices%20for%20Copilot%20coding%20agent%20in%20your%20repository%5D%28https://gh.io/copilot-coding-agent-tips%29%2E%0A%0A%3COnboard%20this%20repo%3E&assignees=copilot) — coding agent works faster and does higher quality work when set up for your repo.
