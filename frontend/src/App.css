@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+}
+.app-container {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px #0001;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  min-height: 500px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.analysis-form {
+  margin-bottom: 2rem;
+}
+.toggle-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.toggle-group button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  background: #e3e6f0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.toggle-group button.active,
+.toggle-group button:hover {
+  background: #475aff;
+  color: white;
+}
+.analysis-form textarea,
+.analysis-form input[type="url"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+  border: 1px solid #bbc;
+  font-size: 1rem;
+  resize: vertical;
+}
+.analysis-form button[type="submit"] {
+  width: 100%;
+  background: #475aff;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.results-display {
+  margin: 1rem 0;
+  background: #f7f9fd;
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 6px #0002;
+}
+.results-display .fake {
+  color: #d93025;
+  font-weight: bold;
+}
+.results-display .real {
+  color: #188038;
+  font-weight: bold;
+}
+.results-display ul {
+  margin: 0.5rem 0 0.5rem 1.3rem;
+}
+.results-display pre {
+  white-space: pre-wrap;
+  background: #e9eefb;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.97em;
+  margin: 0.5rem 0;
+}
+.results-display .mode-indicator {
+  margin-top: 1rem;
+  text-align: right;
+  color: #99a;
+}
+.spinner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 2px;
+  border-radius: 50%;
+  border: 4px solid #475aff;
+  border-color: #475aff transparent #475aff transparent;
+  animation: lds-dual-ring 1.1s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.error {
+  background: #ffeaea;
+  color: #c0392b;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.97em;
+}
+@media (max-width: 700px) {
+  .app-container {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
