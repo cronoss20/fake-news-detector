@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app/backend
+    command: python backend/app.py
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:5000
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./frontend:/app/frontend
+    command: npm start
