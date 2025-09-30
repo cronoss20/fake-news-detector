@@ -1,4 +1,4 @@
-This PR implements a complete fake news detection system that analyzes text content and URLs to identify potential misinformation using OpenAI's GPT model, with a beautiful React frontend interface.
+This is a complete fake news detection system that analyzes text content and URLs to identify potential misinformation using OpenAI's GPT model, with a beautiful React frontend interface.
 
 ## 🚀 Features Implemented
 
