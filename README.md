@@ -1,79 +1,154 @@
-# Fake News Detector
+This PR implements a complete fake news detection system that analyzes text content and URLs to identify potential misinformation using OpenAI's GPT model, with a beautiful React frontend interface.
 
-Este repositorio contiene un proyecto para detectar noticias falsas utilizando varios algoritmos y conjuntos de datos.
+## 🚀 Features Implemented
 
-## Requisitos
+### Backend (Flask + AI Integration)
+- **Flask API Server** with comprehensive error handling and CORS support
+- **OpenAI GPT-3.5-turbo Integration** for intelligent fake news analysis
+- **Smart Fallback System** - works in demo mode without API key using heuristic analysis
+- **URL Content Extraction** using BeautifulSoup to scrape and analyze web articles
+- **Two Analysis Endpoints:**
+  - `/predict` - Direct text analysis
+  - `/analyze` - URL content analysis
+- **Confidence Scoring** - Returns percentage-based reliability assessment
+- **Red Flag Detection** - Identifies specific misinformation indicators
 
-- Python 3.9+ (si se ejecuta localmente)
-- Docker (opcional)
-- Clave de API de OpenAI (necesaria para el funcionamiento del modelo)
+### Frontend (React)
+- **Professional UI/UX** with responsive design and modern styling
+- **Dual Input Modes** - Toggle between text analysis and URL analysis
+- **Real-time Analysis** with loading states and comprehensive error handling
+- **Detailed Results Display** showing confidence scores, reasoning, and red flags
+- **Mobile-Friendly** responsive design that works on all devices
 
-## Instalación local
+### Configuration & Deployment
+- **Docker Support** - Complete containerization with multi-stage builds
+- **Development Scripts** - Easy startup scripts for Windows and Linux
+- **Production Ready** - Includes Heroku Procfile and deployment configurations
+- **Environment Management** - Proper handling of API keys and configuration
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/cronoss20/fake-news-detector.git
-   cd fake-news-detector
-   ```
+## 🎯 How It Works
 
-2. Crea y activa un entorno virtual (opcional pero recomendado):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
-   ```
+1. **Text Analysis**: Users can paste suspicious text directly for immediate analysis
+2. **URL Analysis**: Users can enter news article URLs to extract and analyze content
+3. **AI Processing**: Uses GPT-3.5-turbo to evaluate content for misinformation indicators
+4. **Results Display**: Shows whether content is likely fake news with confidence percentage and specific red flags
 
-3. Instala las dependencias:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🖼️ Screenshots
 
-4. Configura las variables de entorno:
+**Main Interface:**
+![Fake News Detector Interface](https://github.com/user-attachments/assets/372e902b-848f-4d06-ba59-e511b34e4198)
 
-   Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido (reemplaza `TU_API_KEY` con tu clave real):
+**Analysis Results:**
+![Analysis Results](https://github.com/user-attachments/assets/0f057593-5cc7-4bdd-ae14-9370fd7b9e1b)
 
-   ```
-   OPENAI_API_KEY=TU_API_KEY
-   ```
+## 🛠️ Technical Details
 
-## Ejecución local
+- **Backend**: Python Flask with OpenAI API integration, BeautifulSoup for web scraping
+- **Frontend**: React with Axios for API communication, responsive CSS design
+- **AI Model**: GPT-3.5-turbo for intelligent content analysis
+- **Deployment**: Docker containers, Heroku/Render support, GitHub Pages ready
+- **Error Handling**: Graceful fallbacks, user-friendly error messages
 
-Ejecuta la aplicación con:
+## 🚀 Quick Start
+
+The system can be started easily using the provided scripts:
 
 ```bash
-python app.py
+# Start both backend and frontend
+./start-dev.sh
+
+# Or manually:
+cd backend && python app.py  # Backend on :5000
+cd frontend && npm start     # Frontend on :3000
 ```
 
-La aplicación estará disponible en http://localhost:5000.
+## 📋 Demo Mode
 
-## Uso con Docker
+The system works immediately without requiring an OpenAI API key by providing intelligent heuristic analysis. For full AI-powered analysis, users can add their OpenAI API key to the `.env` file.
 
-1. Construye la imagen:
+## 🔧 Files Added/Modified
 
-   ```bash
-   docker build -t fake-news-detector .
-   ```
+- `backend/` - Complete Flask application with AI integration
+- `frontend/` - React application with modern UI/UX
+- `README.md` - Comprehensive documentation and setup guide
+- `docker-compose.yml` - Container orchestration
+- Development and deployment configuration files
 
-2. Ejecuta el contenedor, asegurándote de pasar el archivo `.env`:
+This implementation provides a production-ready fake news detection system that combines modern web technologies with AI-powered analysis, making it easy for users to identify potential misinformation in text content and news articles.
 
-   ```bash
-   docker run --env-file .env -p 5000:5000 fake-news-detector
-   ```
+> [!WARNING]
+>
+> <details>
+> <summary>Firewall rules blocked me from connecting to one or more addresses (expand for details)</summary>
+>
+> #### I tried to connect to the following addresses, but was blocked by firewall rules:
+>
+> - `example.com`
+>   - Triggering command: `/home/REDACTED/work/fake-news-detector/fake-news-detector/backend/venv/bin/python app.py` (dns block)
+>
+> If you need me to access, download, or install something from one of these locations, you can either:
+>
+> - Configure [Actions setup steps](https://gh.io/copilot/actions-setup-steps) to set up my environment, which run before the firewall is enabled
+> - Add the appropriate URLs or hosts to the custom allowlist in this repository's [Copilot coding agent settings](https://github.com/cronoss20/fake-news-detector/settings/copilot/coding_agent) (admins only)
+>
+> </details>
 
-La aplicación estará disponible en http://localhost:5000.
+<!-- START COPILOT CODING AGENT SUFFIX -->
 
-## Estructura del repositorio
 
-- `app.py`: Código principal de la aplicación backend.
-- `frontend/`: Carpeta reservada para el frontend (si aplica).
-- `requirements.txt`: Dependencias de Python.
-- `Dockerfile`: Para construir la imagen Docker.
-- `.env`: Variables de entorno (no se debe compartir en público).
 
-## Notas
+<details>
 
-- Asegúrate de tener una clave válida de OpenAI para usar el detector.
-- Para desarrollo o personalización, añade tus propios algoritmos/datasets en la estructura actual.
+<summary>Original prompt</summary>
 
+> Crear un repositorio funcional en "fake-news-detector" que detecte noticias falsas utilizando IA (GPT) y proporcione una interfaz web con React. Los componentes que se necesitan son los siguientes:
+> 
+> 1. **Backend con Flask (Python):**
+>    - Implementar un servidor Flask que reciba texto y URLs.
+>    - Integrar un modelo de lenguaje basado en GPT (puede ser OpenAI API o Hugging Face).
+>    - Procesar el texto o el contenido obtenido desde el enlace y devolver si es "Fake News" junto con un porcentaje de confianza.
+>    - Crear endpoints `/predict` y `/analyze`.
+> 
+> 2. **Frontend con React:**
+>    - Una página principal que permita:
+>      - Ingresar texto o un enlace.
+>      - Enviar la solicitud al backend y mostrar los resultados.
+>    - Diseño sencillo pero funcional.
+> 
+> 3. **Integración y Despliegue:**
+>    - Incluir un archivo de configuración para ejecutar el backend y frontend juntos.
+>    - Proporcionar un archivo README.md con instrucciones para la instalación, ejecución y uso del sistema.
+> 
+> 4. **Extras:**
+>    - Añadir soporte para Docker (opcional).
+>    - Usar GitHub Pages para desplegar el frontend y proporcionar instrucciones para desplegar el backend en una plataforma como Render o Heroku.
+
+
+</details>
+*This pull request was created as a result of the following prompt from Copilot chat.*
+> Crear un repositorio funcional en "fake-news-detector" que detecte noticias falsas utilizando IA (GPT) y proporcione una interfaz web con React. Los componentes que se necesitan son los siguientes:
+> 
+> 1. **Backend con Flask (Python):**
+>    - Implementar un servidor Flask que reciba texto y URLs.
+>    - Integrar un modelo de lenguaje basado en GPT (puede ser OpenAI API o Hugging Face).
+>    - Procesar el texto o el contenido obtenido desde el enlace y devolver si es "Fake News" junto con un porcentaje de confianza.
+>    - Crear endpoints `/predict` y `/analyze`.
+> 
+> 2. **Frontend con React:**
+>    - Una página principal que permita:
+>      - Ingresar texto o un enlace.
+>      - Enviar la solicitud al backend y mostrar los resultados.
+>    - Diseño sencillo pero funcional.
+> 
+> 3. **Integración y Despliegue:**
+>    - Incluir un archivo de configuración para ejecutar el backend y frontend juntos.
+>    - Proporcionar un archivo README.md con instrucciones para la instalación, ejecución y uso del sistema.
+> 
+> 4. **Extras:**
+>    - Añadir soporte para Docker (opcional).
+>    - Usar GitHub Pages para desplegar el frontend y proporcionar instrucciones para desplegar el backend en una plataforma como Render o Heroku.
+
+<!-- START COPILOT CODING AGENT TIPS -->
 ---
 
-Siente libre de contribuir o abrir issues para mejoras.
+✨ Let Copilot coding agent [set things up for you](https://github.com/cronoss20/fake-news-detector/issues/new?title=✨+Set+up+Copilot+instructions&body=Configure%20instructions%20for%20this%20repository%20as%20documented%20in%20%5BBest%20practices%20for%20Copilot%20coding%20agent%20in%20your%20repository%5D%28https://gh.io/copilot-coding-agent-tips%29%2E%0A%0A%3COnboard%20this%20repo%3E&assignees=copilot) — coding agent works faster and does higher quality work when set up for your repo.
