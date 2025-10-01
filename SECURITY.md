@@ -361,7 +361,7 @@ Before deploying to production, verify:
 
 For security concerns or to report vulnerabilities:
 - Open a security advisory on GitHub
-- Email: [Your security contact email]
+- Email: angelsierralopez@icloud.com
 
 ---
 
