@@ -173,6 +173,8 @@ This repository includes a live demo hosted on GitHub Pages. You can deploy your
 
 The live demo is available at: **[https://cronoss20.github.io/fake-news-detector/](https://cronoss20.github.io/fake-news-detector/)**
 
+📖 **[Complete GitHub Pages Guide](GITHUB_PAGES.md)** - Detailed deployment and maintenance instructions
+
 ### Updating the GitHub Pages Demo
 
 To rebuild and update the GitHub Pages deployment:

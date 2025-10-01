@@ -31,6 +31,9 @@ rm -rf docs/
 mkdir -p docs
 cp -r frontend/build/* docs/
 
+# Create .nojekyll to prevent Jekyll processing
+touch docs/.nojekyll
+
 echo ""
 echo -e "${GREEN}✅ Build completed successfully!${NC}"
 echo ""
