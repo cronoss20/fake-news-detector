@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fake-news-detector/static/css/main.54480e30.css",
+    "main.js": "/fake-news-detector/static/js/main.31fbb9bb.js",
+    "index.html": "/fake-news-detector/index.html",
+    "main.54480e30.css.map": "/fake-news-detector/static/css/main.54480e30.css.map",
+    "main.31fbb9bb.js.map": "/fake-news-detector/static/js/main.31fbb9bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54480e30.css",
+    "static/js/main.31fbb9bb.js"
+  ]
+}
