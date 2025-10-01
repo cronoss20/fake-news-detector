@@ -25,6 +25,7 @@ Welcome to the Fake News Detector documentation! This index will help you find t
 | [QUICKSTART.md](QUICKSTART.md) | 5-minute deployment guide | English | Short |
 | [DEMO.md](DEMO.md) | Comprehensive deployment guide | English | Detailed |
 | [DEMO_ES.md](DEMO_ES.md) | Guía de despliegue completa | Español | Detallada |
+| [GITHUB_PAGES.md](GITHUB_PAGES.md) | GitHub Pages deployment | English | Detailed |
 | [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md) | Step-by-step verification | English | Checklist |
 
 ### Technical Documentation

@@ -8,6 +8,14 @@ This is a complete fake news detection system that analyzes text content and URL
 
 ## 🌐 Live Demo
 
+### 🎮 Try It Now!
+
+**[👉 Launch Live Demo](https://cronoss20.github.io/fake-news-detector/)** - Try the app directly in your browser!
+
+> **Note:** The live demo uses a demo backend. For production use with full AI capabilities, deploy your own instance following the guides below.
+
+### 📚 Deploy Your Own Instance
+
 Want to deploy your own live demo? Check out our deployment guides:
 
 **English Documentation:**
@@ -24,6 +32,7 @@ Want to deploy your own live demo? Check out our deployment guides:
 
 | Platform | Backend | Frontend | Free Tier | Setup Time |
 |----------|---------|----------|-----------|------------|
+| **GitHub Pages** | ❌ | ✅ | ✅ Yes | ~2 min |
 | **Render** | ✅ | ✅ | ✅ Yes | ~5 min |
 | **Railway** | ✅ | ✅ | ✅ Yes | ~5 min |
 | **Vercel + Render** | ✅ | ✅ | ✅ Yes | ~7 min |
@@ -155,6 +164,68 @@ This implementation provides a production-ready fake news detection system that 
 2. **Deploy Live Demo**: See [QUICKSTART.md](QUICKSTART.md) for 5-minute deployment
 3. **Production Deployment**: See [DEMO.md](DEMO.md) for comprehensive guide
 4. **Security Setup**: Review [SECURITY.md](SECURITY.md) before going live
+
+## 🌟 GitHub Pages Deployment
+
+This repository includes a live demo hosted on GitHub Pages. You can deploy your own version easily:
+
+### Accessing the Live Demo
+
+The live demo is available at: **[https://cronoss20.github.io/fake-news-detector/](https://cronoss20.github.io/fake-news-detector/)**
+
+📖 **[Complete GitHub Pages Guide](GITHUB_PAGES.md)** - Detailed deployment and maintenance instructions
+
+### Updating the GitHub Pages Demo
+
+To rebuild and update the GitHub Pages deployment:
+
+```bash
+# Run the deployment script
+./deploy-github-pages.sh
+```
+
+Or manually:
+
+```bash
+# Navigate to frontend
+cd frontend
+
+# Install dependencies
+npm install
+
+# Build for production
+REACT_APP_BACKEND_URL=https://your-backend-url.com npm run build
+
+# Copy to docs folder
+cd ..
+rm -rf docs/
+mkdir -p docs
+cp -r frontend/build/* docs/
+
+# Commit and push
+git add docs/ frontend/package.json
+git commit -m "Update GitHub Pages deployment"
+git push origin main
+```
+
+### GitHub Pages Configuration
+
+The repository is configured to serve from the `docs/` folder on the `main` branch:
+
+1. Go to **Settings** → **Pages**
+2. **Source**: Deploy from a branch
+3. **Branch**: `main`
+4. **Folder**: `/docs`
+
+The frontend is built with the homepage set to `/fake-news-detector` to work correctly with GitHub Pages subdirectory routing.
+
+### Backend Configuration
+
+The live demo connects to a demo backend. To use your own backend:
+
+1. Deploy the backend following [QUICKSTART.md](QUICKSTART.md)
+2. Update the backend URL in `deploy-github-pages.sh`
+3. Rebuild and redeploy
 
 > [!WARNING]
 >

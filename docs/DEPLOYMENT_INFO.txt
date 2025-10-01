@@ -1,0 +1,81 @@
+================================================================================
+   FAKE NEWS DETECTOR - GITHUB PAGES DEPLOYMENT
+================================================================================
+
+📍 Live Demo URL: https://cronoss20.github.io/fake-news-detector/
+
+🏗️ Deployment Architecture:
+   
+   ┌─────────────────────────────────────────────┐
+   │         GitHub Repository                    │
+   │  (cronoss20/fake-news-detector)             │
+   └──────────────────┬──────────────────────────┘
+                      │
+                      │ GitHub Pages reads from:
+                      ├─ Branch: main
+                      └─ Folder: /docs
+                      │
+                      ▼
+   ┌─────────────────────────────────────────────┐
+   │         docs/ Directory                      │
+   │                                              │
+   │  ├── index.html (Entry point)               │
+   │  ├── static/                                 │
+   │  │   ├── js/main.js (181 KB)                │
+   │  │   └── css/main.css (2.1 KB)              │
+   │  ├── .nojekyll (Prevent Jekyll)             │
+   │  └── manifest.json (PWA config)             │
+   └──────────────────┬──────────────────────────┘
+                      │
+                      │ CDN Distribution
+                      │
+                      ▼
+   ┌─────────────────────────────────────────────┐
+   │         User's Browser                       │
+   │  (React App Runs Here)                      │
+   └──────────────────┬──────────────────────────┘
+                      │
+                      │ API Calls
+                      │
+                      ▼
+   ┌─────────────────────────────────────────────┐
+   │         Backend Server                       │
+   │  (Deployed separately on Render/Railway)    │
+   │  https://fake-news-detector-backend.*.com   │
+   └─────────────────────────────────────────────┘
+
+================================================================================
+
+📦 Build Information:
+   - React Version: 18.2.0
+   - Build Tool: Create React App (react-scripts 5.0.1)
+   - Total Size: ~772 KB (optimized)
+   - Gzip Size: ~61.35 KB (JavaScript) + 875 B (CSS)
+   - Build Date: October 2024
+   - Base Path: /fake-news-detector
+
+🔧 Configuration:
+   - Homepage: /fake-news-detector (set in package.json)
+   - Backend URL: Configurable via REACT_APP_BACKEND_URL
+   - Current Backend: https://fake-news-detector-backend.onrender.com
+
+🚀 Deployment Process:
+   1. Developer runs: ./deploy-github-pages.sh
+   2. Script builds React app with production settings
+   3. Build output copied to docs/ folder
+   4. Developer commits and pushes to GitHub
+   5. GitHub Pages automatically deploys from docs/
+   6. Site live at: https://cronoss20.github.io/fake-news-detector/
+
+📝 To Update:
+   1. Make changes to frontend/src/
+   2. Run: ./deploy-github-pages.sh
+   3. Commit and push changes
+   4. GitHub Pages auto-updates (2-5 minutes)
+
+📚 Documentation:
+   - Main Guide: ../GITHUB_PAGES.md
+   - Quick Start: ../QUICKSTART.md
+   - Full Docs: ../DEMO.md
+
+================================================================================
