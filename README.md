@@ -10,10 +10,15 @@ This is a complete fake news detection system that analyzes text content and URL
 
 Want to deploy your own live demo? Check out our deployment guides:
 
+**English Documentation:**
 - **[🚀 Quick Start (5 minutes)](QUICKSTART.md)** - Deploy in 5 minutes with free hosting
 - **[📖 Full Deployment Guide](DEMO.md)** - Comprehensive deployment instructions
 - **[🔒 Security Guide](SECURITY.md)** - Security best practices and considerations
 - **[📋 Deployment Checklist](DEPLOYMENT_CHECKLIST.md)** - Ensure nothing is missed
+- **[🎨 Architecture Diagram](ARCHITECTURE.md)** - Visual deployment architecture
+
+**Documentación en Español:**
+- **[🚀 Guía Rápida de Despliegue](DEMO_ES.md)** - Despliega tu demo en 5 minutos (gratis)
 
 ### Deployment Options
 
