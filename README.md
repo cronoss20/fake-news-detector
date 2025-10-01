@@ -1,4 +1,16 @@
+# 📰 Fake News Detector
+
 This is a complete fake news detection system that analyzes text content and URLs to identify potential misinformation using OpenAI's GPT model, with a beautiful React frontend interface.
+
+## 🌐 Live Demo
+
+Want to deploy your own live demo? Check out our deployment guides:
+
+- **[🚀 Quick Start (5 minutes)](QUICKSTART.md)** - Deploy in 5 minutes with free hosting
+- **[📖 Full Deployment Guide](DEMO.md)** - Comprehensive deployment instructions
+- **[🔒 Security Guide](SECURITY.md)** - Security best practices and considerations
+
+> **Try it now!** Follow the [Quick Start Guide](QUICKSTART.md) to deploy your own instance for free.
 
 ## 🚀 Features Implemented
 
